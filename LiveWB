@@ -178,11 +178,11 @@ INSTALLPATH="$HOME/bin/LWB" # without trailing slash "/".
 source $INSTALLPATH/LiveWB.config
 
 # Country discover
-if [[ $AUTOAREA == "yes" ]]
-then
-  EXTIPADDR=$(dig +short myip.opendns.com @resolver1.opendns.com)
-  COUNTRY=$(whois $EXTIPADDR | awk -F':[ \t]+' 'tolower($1) ~ /^country$/ { print tolower($2) }')
-fi
+#if [[ $AUTOAREA == "yes" ]]
+#then
+#  EXTIPADDR=$(dig +short myip.opendns.com @resolver1.opendns.com)
+#  COUNTRY=$(whois $EXTIPADDR | awk -F':[ \t]+' 'tolower($1) ~ /^country$/ { print tolower($2) }')
+#fi
 
 # Country selection
 # If AUTOAREA="yes", and COUNTRY is not empty, and the correct config file exists
